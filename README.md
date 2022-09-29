@@ -1,18 +1,11 @@
 # Instant Property Value Prediction
 A fast property valuation tool that uses geographical characteristics to provide a precise listing price range. 
 
-## Table of Contents
-  - [Table of Contents](#table-of-contents)
-  - [App](#app)
-  - [Data](#data)
-    - [Example](#example)
-    - [Scraper](#scraper)
-  - [Setup](#setup)
-  - [License](#license)
 ## App
 
 ## Data
 Data was collected through
+
 ### Example
 ```
 {
@@ -40,7 +33,7 @@ Data was collected through
 },
 ```
 
-### Scraper
+## Scraper
 
 ## Setup
 

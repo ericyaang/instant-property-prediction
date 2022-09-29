@@ -3,6 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# KML extensions
+*.kml
+
+# SHP extensions
+*.shp
+
 # C extensions
 *.so
 
