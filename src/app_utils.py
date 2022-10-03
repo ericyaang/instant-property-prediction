@@ -7,6 +7,7 @@ import streamlit as st
 import re
 import geopandas as gp
 import fiona
+import numpy as np
 
 
 def extract_string(str):
@@ -87,7 +88,7 @@ def get_geo(df: pd.DataFrame):
     df["saude"] = df["coor"].apply(
         lambda x: [distance_from(i, x) for i in saude_df["coor"]]
     )
-    df["saude"] = df["saude"].apply(lambda x: min(x)) * 1000
+    df["saude"] = df["saude"].apply(lambda x: min(x))
     df["mercados"] = df["coor"].apply(
         lambda x: [distance_from(i, x) for i in mercado_df["coor"]]
     )
@@ -114,20 +115,6 @@ def get_geo(df: pd.DataFrame):
     df["inundacao"] = df["inundacao"].apply(lambda x: min(x))
     df = df.drop("coor", axis=1)
     return df
-
-
-def set_scores(row):
-    score = (
-        row["risco"] * -2
-        + row["inundacao"] * -1.5
-        + row["escolas"] * 1
-        + row["mercados"] * 1
-        + row["saude"] * 1.5
-        + row["onibus"] * 1
-        + row["vegetacao"] * 1
-    )
-    return score * -1
-
 
 def get_geo_scores(df):
     from sklearn.preprocessing import MinMaxScaler
@@ -159,15 +146,16 @@ def prepare_scores(df, bairro):
 
 def set_score(row):
     score = (
-        row["risco"] * -2
-        + row["inundacao"] * -1
+        row["risco"] * -3
+        + row["inundacao"] * -2
         + row["escolas"] * 1
         + row["mercados"] * 1
         + row["saude"] * 1.5
         + row["onibus"] * 1
         + row["vegetacao"] * 1
     )
-    return score
+    return score * -1
+
 
 
 def set_local_score(row):
@@ -178,11 +166,11 @@ def set_local_score(row):
         + row["onibus"]
         + row["vegetacao"]
     )
-    return score
+    return score * -1
 
 
 def set_risco_score(row):
-    score = row["risco"] * 1.5 + row["inundacao"]
+    score = row["risco"] * 3 + row["inundacao"] * 1.5
     return score
 
 

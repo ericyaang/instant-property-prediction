@@ -10,7 +10,6 @@
   "lower_bound_cond": 0.01,
   "upper_bound_cond": 0.995,
   "selected_cols": [
-    "valor",
     "categoria",
     "condominio",
     "area",

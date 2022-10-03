@@ -3,6 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#mlflow
+/mlruns
+
+# notebooks
+*.ipynb
+
 # KML extensions
 *.kml
 
