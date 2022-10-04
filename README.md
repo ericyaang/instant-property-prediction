@@ -2,7 +2,6 @@
 A fast property valuation tool that uses geographical characteristics to provide a precise listing price range. 
 
 ## Table of Contents
-- [Instant Property Value Prediction](#instant-property-value-prediction)
   - [Table of Contents](#table-of-contents)
   - [App](#app)
   - [How accurate is it?](#how-accurate-is-it)
