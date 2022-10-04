@@ -1,6 +1,18 @@
 # Instant Property Value Prediction
 A fast property valuation tool that uses geographical characteristics to provide a precise listing price range. 
 
+## Table of Contents
+- [Instant Property Value Prediction](#instant-property-value-prediction)
+  - [Table of Contents](#table-of-contents)
+  - [App](#app)
+  - [How accurate is it?](#how-accurate-is-it)
+  - [Data](#data)
+    - [Example of raw datapoint from listings](#example-of-raw-datapoint-from-listings)
+    - [Example of the datapoint from the final dataset](#example-of-the-datapoint-from-the-final-dataset)
+    - [Scraper](#scraper)
+  - [Setup](#setup)
+  - [Limitations and improvements](#limitations-and-improvements)
+  - [License](#license)
 ## App
 ``
 streamlit src/run app.py 
