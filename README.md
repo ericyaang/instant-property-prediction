@@ -1,7 +1,10 @@
 # Instant Property Value Prediction
 A fast property valuation tool that uses geographical characteristics to provide a precise listing price range. 
 
+An application that assesses the value of real estate properties in Florianópolis, Brazil. The app evaluates various factors, including the location, size, and other relevant features of the properties, as well as the proximity to risk areas, flooding, public transportation, public hospitals, markets, and green areas. This tool can serve as a personal real estate consultant, providing users with a comprehensive evaluation of the properties they are interested in. The app uses various machine learning techniques, including LightGBM, to make instant evaluations based on the geographic characteristics of the properties. In addition to the app, the repository also includes code for reproducing the analysis, as well as the datasets used in the project.
+
 ## Table of Contents
+
   - [Table of Contents](#table-of-contents)
   - [App](#app)
   - [How accurate is it?](#how-accurate-is-it)
